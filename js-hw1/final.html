@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <style>
+        #image {
+            width: 600px;
+            height: 400px;
+            border: 1px solid black;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain; /* Ensure images fit within the div */
+            text-align: center; /* Center the text */
+            line-height: 400px; /* Vertically center the text */
+        }
+    </style>
+</head>
+<body>
+    <div id="image">
+        Hover over an image below to display here.
+    </div>
+
+    <img src="https://img.freepik.com/free-photo/sunset-bridge-road_1321-1657.jpg" alt="Description of image 1" 
+         onmouseover="upDate(this)" onmouseout="unDo()" 
+         onfocus="upDate(this)" onblur="unDo()">
+
+    <img src="https://img.freepik.com/free-photo/budir-church-budakirkja-iceland_181624-824.jpg" alt="Description of image 2" 
+         onmouseover="upDate(this)" onmouseout="unDo()" 
+         onfocus="upDate(this)" onblur="unDo()">
+
+    <img src="https://img.freepik.com/premium-vector/catholic-church-buildings-icons-isolated-cathedral-chapels-monastery-facades-medieval-modern-churches-design-christian-evangelic-religious-cartoon-architecture-exterior-symbols-set_8071-1795.jpg?w=996" alt="Description of image 3" 
+         onmouseover="upDate(this)" onmouseout="unDo()" 
+         onfocus="upDate(this)" onblur="unDo()">
+
+    <img src="https://img.freepik.com/free-vector/church-concept-illustration_114360-17261.jpg?t=st=1733633278~exp=1733636878~hmac=6eeb89494558122815a6cbff6337e82e26396bd07c9894076f93e3833feb388d&w=740" alt="Description of image 4" 
+         onmouseover="upDate(this)" onmouseout="unDo()" 
+         onfocus="upDate(this)" onblur="unDo()">
+
+    <img src="https://img.freepik.com/free-vector/flat-design-church-building-illustration_23-2149441508.jpg?t=st=1733633279~exp=1733636879~hmac=04d2e9268af7c9938ca9ce73a9b5795081525485b8cec10d522d639b30fa47c1&w=740" alt="Description of image 5" 
+         onmouseover="upDate(this)" onmouseout="unDo()" 
+         onfocus="upDate(this)" onblur="unDo()">
+
+    <img src="https://img.freepik.com/free-photo/vertical-shot-groot-kerk-south-africa-blue-sky_181624-10095.jpg?t=st=1733633326~exp=1733636926~hmac=c00124b965853128b7c127c7ff21273d6dd477a1472f8a3fc74904a5e571bb33&w=740" alt="Description of image 6" 
+         onmouseover="upDate(this)" onmouseout="unDo()" 
+         onfocus="upDate(this)" onblur="unDo()">
+
+    <script>
+        function upDate(previewPic) {
+            document.getElementById('image').innerHTML = previewPic.alt;
+            document.getElementById('image').style.backgroundImage = "url('" + previewPic.src + "')";
+        }
+
+        function unDo() {
+            document.getElementById('image').style.backgroundImage = "url('')";
+            document.getElementById('image').innerHTML = "Hover over an image below to display here.";
+        }
+
+        // Function to add tabindex attributes
+        function addTabIndex() {
+            console.log("onload event triggered!");
+            var images = document.querySelectorAll('img');
+            for (var i = 0; i < images.length; i++) {
+                images[i].setAttribute('tabindex', '0'); 
+            }
+        }
+
+        // Call addTabIndex() when the page loads
+        window.onload = addTabIndex; 
+    </script>
+</body>
+</html>
