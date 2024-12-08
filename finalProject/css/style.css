@@ -1,0 +1,111 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2{
+    text-align:center;
+  }
+
+li{
+    margin-top: 20px;
+}
+
+img{
+    border: 5px solid blue;
+    border-radius: 35px;
+    width: 100%;
+  }
+
+.label{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* Mobile-first styles */
+body {
+  background-color: #dedede;
+  padding: 5px;
+  margin: 15px;
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 1.95em;
+}
+
+h2 {
+  text-align: center;
+}
+
+li {
+  margin-top: 20px;
+}
+
+img {
+  border: 5px solid blue;
+  width: 100%;
+}
+
+.label {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column grid */
+  gap: 10px; /* 10px gap between rows and columns */
+}
+@media (min-width: 772px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Two-column grid */
+  }
+
+  figure {
+    border-radius: 50%; /* Circular shape */
+  }
+
+  figure:last-of-type {
+    grid-column: span 2; /* Last figure spans two columns */
+  }
+}
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Two-column grid */
+  }
+
+  figure {
+    border-radius: 0; /* Remove border-radius */
+  }
+
+  figure:nth-of-type(3n) {
+    grid-column: span 2; /* Every third figure spans two columns */
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto; /* Remove smooth scrolling */
+  }
+}
+@media (prefers-color-scheme: dark) {
+  figure {
+    background-color: #333; /* Dark background color */
+    color: #ff0; /* Yellowish font color */
+    border-color: black; /* Black border color */
+  }
+}
