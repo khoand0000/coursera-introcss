@@ -56,3 +56,114 @@ h1 {
 p {
   line-height: 1.6;
 }
+
+/* General body styles */
+body {
+  font-family: sans-serif; 
+  font-size: 16px; 
+  margin: 0; 
+}
+
+/* Skip to Main Content link */
+.skip-link {
+  position: absolute; /* Allow positioning */
+  top: -40px; /* Hide off-screen initially */
+  left: 0;
+  background: #333; /* Match nav background */
+  color: white;
+  padding: 8px 15px;
+  z-index: 100; /* Ensure it's on top */
+}
+
+.skip-link:focus { 
+  top: 0; /* Bring into view on focus */
+}
+
+/* Header styles */
+header {
+  background-color: #f0f0f0; 
+  padding: 20px; 
+}
+
+/* Navigation styles */
+nav {
+  background-color: #333; 
+  padding: 10px;
+  display: inline-block; /* Use inline-block */
+  width: 80%; /* Set width to 80% */
+}
+
+nav ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  text-align: center; 
+}
+
+/* Commented out existing li styling */
+/* 
+nav li {
+  display: inline-block; 
+  width: 20%; 
+  margin: 0 10px; 
+} 
+*/
+
+nav a {
+  text-decoration: none; 
+  color: white; 
+}
+
+/* Style image within nav */
+nav img {
+  width: 10%; 
+}
+
+/* Main content styles */
+main {
+  background-color: #fff; 
+  padding: 20px;
+  font-size: 18px; 
+  line-height: 1.6; 
+}
+
+/* Footer styles */
+footer {
+  background-color: #333; 
+  color: white; 
+  text-align: center; 
+  padding: 10px;
+}
+
+/* Heading styles */
+h1 {
+  text-align: center;
+  font-family: 'Times New Roman', serif; 
+  color: #333; 
+}
+
+/* Paragraph styles */
+p {
+  line-height: 1.6; 
+}
+
+/* Grid layout styles */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%; /* Two columns, 40% each */
+  justify-content: space-around; /* Adjust spacing between columns */
+  align-items: center; /* Vertically center items */
+  row-gap: 20px; /* Add space between rows */
+}
+
+/* Style images within .grid */
+.grid img {
+  width: 100%;
+}
+
+/* Flexbox layout styles */
+.flex {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: space-around; /* Distribute space around items */
+}
